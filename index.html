@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Колеса идей для коротких рассказов</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="title-block">
+        <p class="eyebrow">генератор короткой прозы</p>
+        <h1>Колеса идей для рассказов</h1>
+        <p class="subtitle">Нажмите центральную кнопку: колеса выберут героя, место и конфликт. На выходе получится зерно для короткого рассказа.</p>
+      </div>
+      <aside class="status" aria-live="polite">
+        <p class="status-label">Искра сюжета</p>
+        <p class="status-text" id="statusText">Колеса ждут первого импульса.</p>
+      </aside>
+    </header>
+
+    <main>
+      <section class="wheel-grid" id="wheelGrid" aria-label="Колеса случайных идей"></section>
+
+      <section class="control" aria-label="Запуск генератора">
+        <button class="spin-button" id="spinButton" type="button" aria-label="Запустить все колеса">
+          <span class="button-icon" aria-hidden="true">✦</span>
+          <span class="button-text">Запустить<br>идею</span>
+        </button>
+      </section>
+
+      <section class="result-panel" aria-live="polite">
+        <p class="result-kicker">Выпавшая завязка</p>
+        <p class="story-result empty" id="storyResult">Здесь появится плотная, странная и пригодная для письма завязка.</p>
+      </section>
+    </main>
+  </div>
+
+  <dialog class="idea-dialog" id="ideaDialog" aria-labelledby="dialogTitle">
+    <div class="dialog-shell">
+      <button class="dialog-close" id="dialogClose" type="button" aria-label="Закрыть окно">×</button>
+      <p class="dialog-kicker">ваше задание</p>
+      <h2 class="dialog-title" id="dialogTitle">Новая завязка</h2>
+      <p class="dialog-text" id="dialogText"></p>
+      <dl class="dialog-picks" id="dialogPicks"></dl>
+      <button class="dialog-action" id="dialogAction" type="button">Закрыть</button>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
